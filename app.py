@@ -1186,5 +1186,6 @@ def view_pdfs(filename):
 
     return send_file(file_path, mimetype='application/pdf', as_attachment=False)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':  # Use __name__, not _main_
+    port = int(os.environ.get('PORT', 5000))  # Use PORT from env or default to 5000
+    app.run(host='0.0.0.0', port=port)  # Bind to all network interfaces
