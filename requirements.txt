@@ -18,7 +18,6 @@ scipy
 statsmodels
 matplotlib
 scikit-learn
-gridfs
 wtforms
 authlib
 requests
